@@ -1,0 +1,53 @@
+{
+    "name": "mobx-example",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@types/jest": "24.0.19",
+        "@types/node": "12.11.2",
+        "@types/react": "16.9.9",
+        "@types/react-dom": "16.9.2",
+        "mobx": "^5.14.2",
+        "mobx-react": "^6.1.4",
+        "react": "^16.10.2",
+        "react-dom": "^16.10.2",
+        "react-scripts": "3.2.0",
+        "styled-components": "^4.4.0",
+        "typescript": "3.6.4"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "size": "yarn build && size-limit",
+        "cypress:run": "cypress run --record --key 649a47dd-328e-4643-81e0-2d7caf034e2e",
+        "ci:cypress-run": "start-server-and-test start http://localhost:3000 cypress:run"
+    },
+    "size-limit": [
+        {
+            "path": "build/static/**/*.{js,css,svg,woff,woff2,png,ttf,html}"
+        }
+    ],
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@size-limit/preset-app": "^2.1.6",
+        "@types/styled-components": "^4.1.19",
+        "cypress": "^3.5.0",
+        "start-server-and-test": "^1.10.6"
+    }
+}
